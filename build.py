@@ -10,7 +10,7 @@ DIST = ROOT / "dist"
 VOLUMES = ["0.75", "0.5", "0.25", "0"]
 SOUNDS = ["chestopen", "chestclosed"]
 # Fixed timestamp so the same commit always produces byte-identical zips.
-EPOCH = (1980, 1, 1, 0, 0, 0)
+EPOCH = (2026, 10, 3, 0, 0, 0)
 
 
 def pack_files(volume):
