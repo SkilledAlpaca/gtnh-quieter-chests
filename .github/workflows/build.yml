@@ -17,10 +17,15 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build packs
-        run: python3 build.py
+        run: |
+          if [[ "$GITHUB_REF" == refs/tags/v* ]]; then
+            python3 build.py "${GITHUB_REF_NAME#v}"
+          else
+            python3 build.py
+          fi
 
       - name: Publish release
         if: startsWith(github.ref, 'refs/tags/v')
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" dist/*.zip --title "$GITHUB_REF_NAME" --generate-notes
+        run: gh release create "$GITHUB_REF_NAME" dist/*.zip dist/gtnh-pack-update.json --title "$GITHUB_REF_NAME" --generate-notes

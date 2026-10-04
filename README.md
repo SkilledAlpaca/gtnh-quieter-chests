@@ -32,4 +32,6 @@ python3 build.py
 
 The build needs Python 3 and no other dependencies. Pushing a `v*` tag builds the packs in GitHub Actions and attaches them to a new release.
 
+The packs opt in to the [GTNH resource pack update notifier](https://wiki.gtnewhorizons.com/wiki/Resource_Packs#Update_Notifier). The tag sets the pack version, so use two-part numeric tags such as `v1.1`. Each release also carries the `gtnh-pack-update.json` asset that the notifier requires.
+
 The 25%, 50%, and 75% packs override `sounds.json`. The muted pack replaces the two sound files with `silence.ogg`, because Minecraft 1.7.10 rejects a `sounds.json` volume of 0.
