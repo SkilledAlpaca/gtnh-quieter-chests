@@ -1,4 +1,8 @@
-# GTNH Quieter Chests
+<p align="center">
+  <img src="pack.png" alt="Quieter Chests pack icon" width="160">
+</p>
+
+<h1 align="center">GTNH Quieter Chests</h1>
 
 Resource packs for Minecraft 1.7.10 (GregTech: New Horizons) that lower the volume of the chest open and close sounds.
 
